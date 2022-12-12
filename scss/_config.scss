@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600&display=swap');
+
+// ===== Typography ===== //
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Roboto Slab', serif;
+$font-size: clamp(1.2rem, 2vw, 1.5rem);
+$letter-spacing: .1em;
+$line-height: 1.4;
+
+// ======= Colors ====== //
+$clr-brand: #ff9900;
+$clr-primary: #ffffff;
+$clr-secondary: #0d0d0d;
+$clr-text: #262626;
+
+// ===== Utilities ===== //
+.offscreen {
+    margin: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
