@@ -3,7 +3,29 @@
     background-image: url(/dist/images/hero.png);
     background-repeat: no-repeat;
     background-position: right bottom;
-    background-size: 45%;
+    background-size: 50%;
     padding: .2em 2em;
 
+    &__h1 {
+        text-align: left;
+    }
+
+    .fa-solid {
+        font-size: 2.4rem;
+    }
+}
+
+// This media querry makes bg image responsive
+
+@media screen and (max-width: 992px){
+    .header {
+        background-size: 65%;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    .header {
+        background-size: 100%;
+    }
 }

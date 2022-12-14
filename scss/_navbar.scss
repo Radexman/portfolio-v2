@@ -1,9 +1,104 @@
 .header__nav {
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
     &-brand {
         font-family: $font-secondary;
         text-decoration: none;
         font-size: 1.2rem;
         color: $clr-secondary;
+    }
+
+    .nav__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3em;
+
+        .menu__item {
+            list-style: none;
+
+            .item__link {
+                color: $clr-secondary;
+                text-decoration: none;
+                transition: $transition;
+
+                &:hover {
+                    color: $clr-brand;
+                }
+            }
+        }
+    }
+}
+
+.header__hamburger {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    top: 12px;
+    z-index: 1;
+
+    &__bar {
+        display: block;
+        width: 34px;
+        height: 3px;
+        margin: 5px auto;
+        border-radius: 2px;
+        transition: $transition;
+        background-color: $clr-secondary;
+    }
+}
+
+// This media querry toggles hamburger navbar
+// and makes small animation. This flips navbar 
+// horizontally and makes it responsive.
+
+@media screen and (max-width: 768px) {
+    .header__hamburger {
+        display: block;
+    }
+
+    .header__hamburger.active .header__hamburger__bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header__hamburger.active .header__hamburger__bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .header__hamburger.active .header__hamburger__bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav__menu {
+        position: fixed;
+        z-index: 1;
+        left: -100%;
+        top: 40px;
+        flex-flow: column nowrap;
+        background-color: $clr-transparent;
+        width: 100%;
+        text-align: center;
+        transition: $transition;
+
+        .menu__item {
+            margin: .1em 0;
+        }
+    }
+
+    .item__link {
+        color: $clr-primary;
+        padding-inline: 14em;
+    }
+
+    .nav__menu.active {
+        left: 0;
+    }
+
+    .header__nav .nav__menu {
+        gap: .2em;
     }
 }
