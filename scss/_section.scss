@@ -1,0 +1,79 @@
+.main__section {
+    min-height: 130vh;
+    background-color: $clr-transparent;
+    padding: 4em 10em;
+    position: relative;
+
+    .circle1 {
+        font-size: 55em;
+        width: 0.5em;
+        box-sizing: content-box;
+        height: 0.4em;
+        border: 55px solid hsla(36, 100%, 50%, .5);
+        position: absolute;
+        left: -400px;
+        z-index: -1;
+        top: 330px;
+        border-radius: 0.35em;
+    }
+
+    .circle2 {
+        font-size: 20em;
+        width: 0.3em;
+        box-sizing: content-box;
+        height: 0.3em;
+        border: 20px solid hsl(0, 0%, 5%, .5);
+        position: fixed;
+        right: -100px;
+        z-index: -1;
+        top: 1.2em;
+        border-radius: 0.35em;
+    }
+
+    .circle3 {
+        font-size: 30em;
+        width: 0.35em;
+        box-sizing: content-box;
+        height: 0.35em;
+        border: 15px solid hsl(0, 0%, 5%, .75);
+        position: absolute;
+        left: -150px;
+        z-index: -1;
+        top: 10px;
+        border-radius: 0.35em;
+    }
+
+    .section__box {
+        
+        .box__h3 {
+            text-align: center;
+        }
+    }
+}
+
+.bottom-curve {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.bottom-curve svg {
+    position: relative;
+    display: block;
+    width: calc(159% + 1.3px);
+    height: 149px;
+    transform: rotateY(180deg);
+}
+
+.bottom-curve .shape-fill {
+    fill: $clr-transparent;
+}
+
+@media screen and (max-width: 576px){
+    .main__section {
+        padding-inline: 3em;
+        text-align: center;
+        }
+}
