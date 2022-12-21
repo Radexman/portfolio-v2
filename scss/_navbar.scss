@@ -77,22 +77,28 @@
         position: fixed;
         z-index: 1;
         left: -100%;
-        top: 40px;
+        top: 0px;
         flex-flow: column nowrap;
-        background-color: $clr-transparent;
+        background-color: #fff;
         width: 100%;
         text-align: center;
         transition: $transition;
+        border-bottom: 1px solid $clr-secondary;
+        box-shadow: $box-shadow-bottom;
 
         .menu__item {
-            margin: .1em 0;
+            padding: .5em 0;
+            font-size: 1.3rem;
+            font-weight: 500;
+            min-width: 100vw;
+            transition: $transition;
+
+            &:hover {
+                background-color: $clr-transparent;
+            }
         }
     }
 
-    .item__link {
-        color: $clr-primary;
-        padding-inline: 14em;
-    }
 
     .nav__menu.active {
         left: 0;

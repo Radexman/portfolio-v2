@@ -93,23 +93,30 @@
     position: fixed;
     z-index: 1;
     left: -100%;
-    top: 40px;
+    top: 0px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    background-color: rgba(13, 13, 13, 0.3137254902);
+    background-color: #fff;
     width: 100%;
     text-align: center;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
+    border-bottom: 1px solid #0d0d0d;
+    -webkit-box-shadow: 0 7px 10px #262626;
+            box-shadow: 0 7px 10px #262626;
   }
   .nav__menu .menu__item {
-    margin: 0.1em 0;
+    padding: 0.5em 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    min-width: 100vw;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
-  .item__link {
-    color: #ffffff;
-    padding-inline: 14em;
+  .nav__menu .menu__item:hover {
+    background-color: rgba(13, 13, 13, 0.3137254902);
   }
   .nav__menu.active {
     left: 0;
@@ -345,8 +352,66 @@
   top: 10px;
   border-radius: 0.35em;
 }
+.main__section .boxes__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  place-content: center;
+}
+.main__section .section__box {
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  gap: 0.4em;
+  margin: 3.5em auto 0 auto;
+}
 .main__section .section__box .box__h3 {
   text-align: center;
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 0.3em;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  width: 100%;
+}
+.main__section .section__box .box__img {
+  width: 100%;
+  border: 1px solid #0d0d0d;
+  border-radius: 5px;
+}
+.main__section .section__box .primary-btn {
+  text-decoration: none;
+  padding-block: 0.3em;
+  width: 100%;
+  border: 2px solid #0d0d0d;
+  text-align: center;
+  border-radius: 5px;
+  color: #0d0d0d;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: linear-gradient(45deg, #ff9900 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
+}
+.main__section .section__box .primary-btn:hover {
+  background-position: 0;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .bottom-curve {
@@ -411,8 +476,4 @@ h1, h3, h4 {
 h2 {
   color: #ff9900;
   font-family: "Roboto Slab", serif;
-}
-
-p {
-  letter-spacing: 0.1em;
 }/*# sourceMappingURL=main.css.map */

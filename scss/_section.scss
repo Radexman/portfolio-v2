@@ -43,10 +43,47 @@
         border-radius: 0.35em;
     }
 
+    .boxes__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2em;
+        place-content: center;
+    }
+
     .section__box {
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+        gap: .4em;
+        margin: 3.5em auto 0 auto;
         
         .box__h3 {
             text-align: center;
+            background-color: $clr-secondary;
+            color: #fff;
+            padding: .3em;
+            border-radius: $border-radius-small;
+            font-size: .9rem;
+            font-weight: 300;
+            width: 100%;
+        }
+
+        .box__img {
+            width: 100%;
+            border: 1px solid $clr-secondary;
+            border-radius: $border-radius-small;
+        }
+
+        .primary-btn {
+            @include btn;
+        }
+
+        .primary-btn:hover {
+            background-position: 0;
+            color: $clr-primary;
+            font-weight: 600;
         }
     }
 }
