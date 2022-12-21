@@ -1,10 +1,14 @@
 .header {
     min-height: 100vh;
-    background-image: url(/dist/images/hero.png);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 50%;
-    padding: .2em 2em;
+    padding: .2em 2em 0 2em;
+
+    #hero__img {
+        width: 50%;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        z-index: -1;
+    }
 
     &__h1 {
         text-align: left;
@@ -117,15 +121,21 @@
 // This media querry makes bg image responsive
 
 @media screen and (max-width: 992px){
-    .header {
-        background-size: 65%;
-    }
 
+    .header {
+
+        #hero__img {
+            width: 70%;
+        }
+    }
 }
 
 @media screen and (max-width: 576px){
     .header {
-        background-size: 100%;
-        padding: .2em .8em;
+
+        #hero__img {
+            height: 50vh;
+            width: 90%;
+        }
     }
 }

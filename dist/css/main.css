@@ -127,11 +127,14 @@
 }
 .header {
   min-height: 100vh;
-  background-image: url(/dist/images/hero.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 50%;
-  padding: 0.2em 2em;
+  padding: 0.2em 2em 0 2em;
+}
+.header #hero__img {
+  width: 50%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
 }
 .header__h1 {
   text-align: left;
@@ -297,14 +300,14 @@
   }
 }
 @media screen and (max-width: 992px) {
-  .header {
-    background-size: 65%;
+  .header #hero__img {
+    width: 70%;
   }
 }
 @media screen and (max-width: 576px) {
-  .header {
-    background-size: 100%;
-    padding: 0.2em 0.8em;
+  .header #hero__img {
+    height: 50vh;
+    width: 90%;
   }
 }
 .main__section {
@@ -335,7 +338,7 @@
   border: 20px solid hsla(0deg, 0%, 5%, 0.5);
   position: fixed;
   right: -100px;
-  z-index: -1;
+  z-index: -2;
   top: 1.2em;
   border-radius: 0.35em;
 }
