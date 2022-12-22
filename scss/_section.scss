@@ -1,20 +1,41 @@
+// Main projects section
+
+
+.gray-bg {
+    background-color: $clr-transparent;
+}
+
+.white-bg {
+    margin-top: 3em;
+}
+
 .main__section {
     min-height: 130vh;
-    background-color: $clr-transparent;
     padding: 4em 10em;
     position: relative;
+    text-align: justify;
+
+    .section__h2 {
+        margin-bottom: .7em;
+    }
+
+    // Background decorative circles
 
     .circle1 {
-        font-size: 55em;
+        font-size: 70em;
         width: 0.5em;
         box-sizing: content-box;
-        height: 0.4em;
+        height: 0.5em;
         border: 55px solid hsla(36, 100%, 50%, .5);
         position: absolute;
         left: -400px;
         z-index: -1;
-        top: 330px;
+        top: 800px;
         border-radius: 0.35em;
+    }
+
+    .circle-top {
+        top: 200px;
     }
 
     .circle2 {
@@ -86,7 +107,22 @@
             font-weight: 600;
         }
     }
+
+    .section__article {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: .5em;
+        margin-block: 3.5em;
+
+        .article-icon {
+            font-size: 2.5rem;
+        }
+    }
 }
+
+// Curvy wave at the bottom of section
 
 .bottom-curve {
     position: absolute;
@@ -108,9 +144,14 @@
     fill: $clr-transparent;
 }
 
+// Madia querry for mobile design
+
 @media screen and (max-width: 576px){
     .main__section {
         padding-inline: 3em;
-        text-align: center;
+
+        .section__h2 {
+            text-align: center;
+        }
         }
 }
