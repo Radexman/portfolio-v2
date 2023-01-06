@@ -19,6 +19,24 @@
         margin-bottom: .7em;
     }
 
+    .section__quote {
+        font-family: $font-secondary;
+        color: $clr-secondary;
+        font-size: 1.9rem;
+        text-align: center;
+        margin-block: 2em;
+        position: relative;
+        letter-spacing: 1px;
+
+            .quote__q::before {
+                @include citeUp;
+            }
+
+            .quote__q::after {
+                @include citeDown;
+            }
+    }
+
     // Background decorative circles
 
     .circle1 {
@@ -58,7 +76,7 @@
         height: 0.35em;
         border: 15px solid hsl(0, 0%, 5%, .75);
         position: absolute;
-        left: -150px;
+        left: -165px;
         z-index: -1;
         top: 10px;
         border-radius: 0.35em;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600&display=swap");
 .offscreen {
@@ -116,7 +117,7 @@
     transition: 0.3s ease;
   }
   .nav__menu .menu__item:hover {
-    background-color: rgba(13, 13, 13, 0.3137254902);
+    background-color: rgba(13, 13, 13, 0.1254901961);
   }
   .nav__menu.active {
     left: 0;
@@ -311,7 +312,7 @@
   }
 }
 .gray-bg {
-  background-color: rgba(13, 13, 13, 0.3137254902);
+  background-color: rgba(13, 13, 13, 0.1254901961);
 }
 
 .white-bg {
@@ -326,6 +327,31 @@
 }
 .main__section .section__h2 {
   margin-bottom: 0.7em;
+}
+.main__section .section__quote {
+  font-family: "Roboto Slab", serif;
+  color: #0d0d0d;
+  font-size: 1.9rem;
+  text-align: center;
+  margin-block: 2em;
+  position: relative;
+  letter-spacing: 1px;
+}
+.main__section .section__quote .quote__q::before {
+  content: "❝";
+  font-size: 5rem;
+  color: #262626;
+  position: absolute;
+  top: -80px;
+  left: 0px;
+}
+.main__section .section__quote .quote__q::after {
+  content: "❞";
+  font-size: 5rem;
+  color: #262626;
+  position: absolute;
+  bottom: -80px;
+  right: 10px;
 }
 .main__section .circle1 {
   font-size: 70em;
@@ -364,7 +390,7 @@
   height: 0.35em;
   border: 15px solid hsla(0deg, 0%, 5%, 0.75);
   position: absolute;
-  left: -150px;
+  left: -165px;
   z-index: -1;
   top: 10px;
   border-radius: 0.35em;
@@ -469,7 +495,7 @@
 }
 
 .bottom-curve .shape-fill {
-  fill: rgba(13, 13, 13, 0.3137254902);
+  fill: rgba(13, 13, 13, 0.1254901961);
 }
 
 @media screen and (max-width: 576px) {
@@ -483,7 +509,7 @@
 .main__address {
   min-height: 30vh;
   padding: 4em 10em;
-  background-color: rgba(13, 13, 13, 0.3137254902);
+  background-color: rgba(13, 13, 13, 0.1254901961);
   position: relative;
   font-style: normal;
   text-align: justify;
@@ -509,7 +535,7 @@
   margin-bottom: 0.7em;
 }
 .main__address .address__p {
-  margin-block: 0.35em;
+  margin-block: 0.8em;
 }
 .main__address .address__a {
   text-decoration: none;
@@ -553,10 +579,15 @@
 }
 .footer__social a {
   color: #000000;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .footer__social a .fa-file-invoice {
   font-size: 1.85rem;
   margin-bottom: 3px;
+}
+.footer__social a:hover {
+  color: #ffffff;
 }
 .footer__legal {
   font-size: 0.7rem;
@@ -574,7 +605,7 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.08rem, 2vw, 1.5rem);
 }
 
 img {
