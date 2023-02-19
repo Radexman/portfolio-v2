@@ -308,7 +308,7 @@
 @media screen and (max-width: 576px) {
   .header #hero__img {
     height: 50vh;
-    width: 95%;
+    width: 85%;
   }
 }
 .gray-bg {
@@ -342,7 +342,7 @@
   font-size: 5rem;
   color: #262626;
   position: absolute;
-  top: -80px;
+  top: -100px;
   left: 0px;
 }
 .main__section .section__quote .quote__q::after {
