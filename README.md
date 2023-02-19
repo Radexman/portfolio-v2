@@ -1,2 +1,2 @@
-# portfolio v2
- My new and better portfolio 
+# **Radosław Siek || Portfolio**
+This is my second portfolio page. 
